@@ -1,5 +1,12 @@
 package com.example.postapi.DTO;
 
-public record CarsDTO(String modelo, String fabricante, String dataFabricacao, double valor, int anoModelo ) {
-    
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+public record CarsDTO(
+        @NotBlank String modelo,
+        @NotBlank String fabricante,
+        @NotBlank String dataFabricacao,
+        @NotNull double valor,
+        @NotNull int anoModelo) {
 }
